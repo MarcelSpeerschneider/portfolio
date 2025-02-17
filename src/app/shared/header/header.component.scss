@@ -1,0 +1,17 @@
+header {
+    height: 110px;
+    width: 100%;
+    background-color: #141D2F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 100px;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    gap: 29px;
+    font-size: 23px;
+}
+
