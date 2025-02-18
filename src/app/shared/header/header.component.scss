@@ -1,12 +1,14 @@
 header {
     height: 110px;
-    width: 100%;
+    width: 1440px;
     background-color: #141D2F;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-inline: 100px;
     box-sizing: border-box;
+    position: fixed;
+    z-index: 100;
 }
 
 nav {
