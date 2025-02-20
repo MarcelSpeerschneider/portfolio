@@ -1,0 +1,14 @@
+.about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: absolute;
+}
+h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: white;
+    margin-block-end: 0;
+}

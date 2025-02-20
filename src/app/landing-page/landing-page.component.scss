@@ -84,3 +84,35 @@ h2 {
     font-size: 48px;
     color: white;
 }
+
+.hero-contact {
+    z-index: 10;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    bottom: -130px;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: -60px;
+    right: -120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.scroll-down-text {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.img-90deg {
+    transform: rotate(-90deg);
+}
