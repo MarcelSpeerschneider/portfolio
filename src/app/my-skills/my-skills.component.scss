@@ -1,11 +1,11 @@
 .myskills {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    height: 70vh;
     width: 1440px;
     position: relative;
     color: white;
+    height: 600px;
+    align-items: center;
 }
 
 .icons-container {
@@ -37,7 +37,6 @@ h1 {
     color: white;
     margin-block-end: 20px;
     margin-block-start: 0;
-
 }
 
 .skills-info {
