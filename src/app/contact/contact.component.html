@@ -1,18 +1,34 @@
-<div class="container">
-    <form action="action_page.php">
+<div class="contact-main">
+    <div class="contact-header">
+        <img src="assets/img/line-contact.svg" alt="Contact" class="contact-image">
+        <h1>Contact</h1>
+    </div>
+    
+    <div class="contact-container">
+        <div class="contact-text">
+            <h2>Got a problem to solve?</h2>
+            <p>Encourage people to contact you and describe what role you are interested in. Show that you will add
+                value to their projects through your work.</p>
+            <p>Need a Frontend developer? <span>Contact me!</span></p>
+        </div>
+        <div class="form-container">
+            <form action="action_page.php">
 
-        <label for="fname">Your name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-        <label for="lname">Your E-Mail</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
+                <textarea id="subject" name="subject" placeholder="Your message" style="height:200px"></textarea>
 
+                <div class="checkbox-container">
+                    <input type="checkbox" id="privacy" name="privacy" required [(ngModel)]="privacyChecked">
+                    <label for="privacy">I agree to the processing of my data as described in the privacy
+                        policy.</label>
+                </div>
 
-        <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                <input type="submit" value="Send message :)" [class.button-active]="privacyChecked">
 
-        <input type="submit" value="Submit">
-
-    </form>
+            </form>
+        </div>
+    </div>
 </div>
