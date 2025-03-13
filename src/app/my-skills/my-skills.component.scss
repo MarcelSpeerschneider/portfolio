@@ -77,3 +77,10 @@ h2 {
     font-size: 23px;
     font-weight: 400;
 }
+
+.skills-shadow {
+    position: absolute;
+    z-index: -10;
+    left: 0;
+    top: 200px; // oder top: 10rem; oder top: 10%; je nach gewünschter Einheit
+}

@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 .contact-header {
     display: flex;
@@ -26,7 +27,6 @@ h2 {
     display: flex;
     justify-content: center;
     height: 50vh;
-    background-color: #141D2F;
     color: white;
     gap: 10%;
     padding-left: 100px;
@@ -109,5 +109,16 @@ input[type=submit] {
     label {
         color: white;
         font-size: 14px;
+    }
+}
+
+.contact-shadow {
+    position: absolute;
+    right: 0;
+    z-index: -10;
+    top: 200px;
+    
+    img {
+        transform: scaleX(-1); // Spiegelt das Bild horizontal
     }
 }

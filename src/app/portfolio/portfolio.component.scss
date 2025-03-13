@@ -7,6 +7,7 @@ h1 {
 }
 
 .portfolio-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,4 +22,11 @@ h1 {
     justify-content: flex-end;
     width: 100%;
     gap: 32px;
+}
+
+.portfolio-shadow {
+    position: absolute;
+    z-index: -10;
+    left: 0;
+    top: 400px; // oder top: 10rem; oder top: 10%; je nach gewünschter Einheit
 }
