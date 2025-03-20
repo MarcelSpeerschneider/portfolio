@@ -18,13 +18,13 @@ export class LandingPageComponent implements OnInit, OnDestroy {
 
   constructor(private responsiveService: ResponsiveService) { }
 
-  ngOnInit(): void {
-    this.subscriptions.add(
-      this.responsiveService.isMobile$.subscribe(value => this.isMobile = value)
-    );
-    this.subscriptions.add(
-      this.responsiveService.isDesktop$.subscribe(value => this.isDesktop = value)
-    );
+    ngOnInit(): void {
+      this.subscriptions.add(
+        this.responsiveService.isMobile$.subscribe(value => {
+          this.isMobile = value;
+          this.isDesktop = !value;
+        })
+      );
   }
 
   ngOnDestroy(): void {
