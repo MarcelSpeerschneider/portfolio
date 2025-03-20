@@ -12,13 +12,16 @@
             <p>Need a Frontend developer? <span>Contact me!</span></p>
         </div>
         <div class="form-container">
-            <form action="action_page.php">
+            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
-                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name.." required>
 
-                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your email.." required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
 
-                <textarea id="subject" name="subject" placeholder="Your message" style="height:200px"></textarea>
+                <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" id="message" name="message" placeholder="Your message" style="height:200px"></textarea>
+                @if (!message.valid && message.touched) {
+                    <span style="color: red">Please enter a message</span>
+                }
 
                 <div class="checkbox-container">
                     <input type="checkbox" id="privacy" name="privacy" required [(ngModel)]="privacyChecked">
@@ -26,7 +29,7 @@
                         policy.</label>
                 </div>
 
-                <input type="submit" value="Send message :)" [class.button-active]="privacyChecked">
+                <input type="submit" value="Send message :)" [class.button-active]="privacyChecked && message.valid && email.valid && name.valid">
 
             </form>
         </div>

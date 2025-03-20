@@ -43,6 +43,7 @@ h2 {
 
 
 input[type=text],
+input[type=email],
 select,
 textarea {
     width: 100%;
@@ -68,10 +69,11 @@ input[type=submit] {
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    width: 40%;
+    width: 43%;
     font-size: 23px;
     transform: scale(1);
     transition: all 125ms ease-in-out;
+    box-sizing: border-box;
     &:hover {
         scale: 1.1;
     }

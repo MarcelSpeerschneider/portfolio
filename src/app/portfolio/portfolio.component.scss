@@ -11,7 +11,8 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    justify-content: center;
+    height: 2000px;
     color: white;
     font-size: 16px;
     gap: 32px;
@@ -28,5 +29,5 @@ h1 {
     position: absolute;
     z-index: -10;
     left: 0;
-    top: 400px; // oder top: 10rem; oder top: 10%; je nach gewünschter Einheit
+    top: 800px; // oder top: 10rem; oder top: 10%; je nach gewünschter Einheit
 }
