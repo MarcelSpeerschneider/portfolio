@@ -39,12 +39,22 @@ h1 {
     margin-block-start: 0;
 }
 
+.skills-info-container {
+    display: flex;
+}
+
+.vector {
+    align-self: flex-start;
+    margin-top: 70px;
+}
+
 .skills-info {
     width: 100%;
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
     width: 571px;
+    padding-right: 36px;
 }
 
 .skills-text-headline {
@@ -65,7 +75,7 @@ h2 {
     flex-direction: column;
     align-items: flex-end;
     text-align: right;
-    gap: 24px;        
+    gap: 24px;
 }
 
 .purple {

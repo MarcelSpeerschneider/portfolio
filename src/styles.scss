@@ -123,6 +123,13 @@ h3 {
     flex-direction: row-reverse;
 }
 
+@media screen and (max-width: 1440px) {
+    body {
+        max-width: 100%;
+        box-sizing: border-box;
+    }    
+}
+
 /* poppins-300 - latin */
 @font-face {
     font-display: swap;
