@@ -1,0 +1,19 @@
+<h1>Link-Kürzer</h1>
+<div class="container">
+    <label for="originalLink">Original Link:</label>
+    <input type="text" id="originalLink" placeholder="https://www.example.com/..." [(ngModel)]="originalLink">
+
+    <div class="button-row">
+        <button (click)="shortenLink()">Link kürzen</button>
+        <button (click)="clearInput()" class="secondary">Leeren</button>
+    </div>
+
+    <div class="result">
+        <label for="shortenedLink">Gekürzter Link:</label>
+        <textarea id="shortenedLink" readonly [(ngModel)]="shortenedLink"></textarea>
+        <div class="button-row">
+            <button (click)="copyToClipboard()">Kopieren</button>
+            <span *ngIf="showCopySuccess" class="success-message">✓ Kopiert!</span>
+        </div>
+    </div>
+</div>
