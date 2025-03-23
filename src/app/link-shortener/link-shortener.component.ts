@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { ClipboardService } from 'ngx-clipboard'; // Du musst ngx-clipboard installieren: npm install ngx-clipboard
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ClipboardModule } from 'ngx-clipboard';
 
 @Component({
   selector: 'app-link-shortener',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, ClipboardModule],
   templateUrl: './link-shortener.component.html',
   styleUrl: './link-shortener.component.scss'
 })

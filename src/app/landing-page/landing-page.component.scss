@@ -17,9 +17,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100vw;  
     margin-top: 110px;
     position: relative;
+    max-width: 100vw;
 }
 
 .introduction-mobile {
@@ -35,7 +35,13 @@ body {
 .vector {
     position: absolute;
     top: 267.56px;
-    
+    max-width: 100vw;
+
+    @media (max-width: 520px) {
+        top: -50px;
+        width: 100%;
+    }
+
 }
 
 
@@ -43,13 +49,20 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+
+    @media (max-width: 520px) {
+        width: 310px;
+        top: 50px !important;
+
+    }
 }
 
 .portrait-mobile .portrait-background {
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translateX(-50%); /* Zentriert horizontal */
+    transform: translateX(-50%);
+    /* Zentriert horizontal */
 }
 
 .portrait-foreground {
@@ -59,12 +72,9 @@ body {
     left: 0;
 
     @media (max-width: 520px) {
-        width: 90%;  // Shrinks to 80% of original size
-        bottom: 0;
-        img {
-            width: 100%;
-            height: auto;
-        }
+        width: 310px;
+        top: 50px !important;
+
     }
 }
 
@@ -81,6 +91,7 @@ body {
     position: absolute;
     top: 0;
     left: 200px;
+
 }
 
 .portrait-mobile .green-shadow {
@@ -88,9 +99,15 @@ body {
     top: 0;
     left: calc(50% - 20%); // Moved more to the right
     width: 80%; // Reduced width
+
     img {
         width: 100%;
         height: auto;
+    }
+
+    @media screen and (max-width: 520px) {
+        top: 120px;
+
     }
 }
 
@@ -99,14 +116,20 @@ body {
     top: 0;
 }
 
-.portrait-mobile  .purple-shadow {
+.portrait-mobile .purple-shadow {
     position: absolute;
     top: 0;
     left: calc(50% - 60%); // Moved more to the left
     width: 80%; // Reduced width
+
     img {
         width: 100%;
         height: auto;
+    }
+
+    @media screen and (max-width: 520px) {
+        top: 120px;
+
     }
 }
 
@@ -125,6 +148,11 @@ h1 {
     color: white;
     margin-block-end: 0;
 
+    @media screen and (max-width: 520px) {
+        font-size: 18px;
+
+    }
+
 }
 
 h2 {
@@ -133,9 +161,14 @@ h2 {
     color: #9747FF;
     margin-block-start: 0;
 
+    @media screen and (max-width: 520px) {
+        font-size: 20px;
+
+    }
 }
 
 .introduction {
+    padding-top: 120px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -146,35 +179,47 @@ h2 {
 
 .full-introduction {
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
 .full-introduction-mobile {
-    margin-top: 600px; /* Angepasst von 800px */
     display: flex;
-    align-items: center; /* Ausrichtung an der Oberkante */
+    align-items: center;
     justify-content: center;
     z-index: 10;
     width: 100%;
     padding: 0 20px;
     box-sizing: border-box;
 }
+
 .iam {
-    padding-top: 65px;
-    padding-left: 10px;
+    padding-left: 20px;
     box-sizing: border-box;
     transform: rotate(-90deg);
     font-weight: 300;
     font-size: 48px;
     color: white;
+    height: 30px;
+    width: 130px;
+
+    span {}
 }
 
 .iam-mobile {
     position: relative;
-    width: 48px; /* Höhe des originalen Textes */
-    height: 120px; /* Breite des originalen Textes */
+    width: 48px;
+    /* Höhe des originalen Textes */
+    height: 120px;
+    /* Breite des originalen Textes */
     margin-right: 20px;
-    
+
+    @media screen and (max-width: 520px) {
+        width: 8px;
+        height: 40px;
+    }
+
     span {
         position: absolute;
         transform-origin: left top;
@@ -183,8 +228,14 @@ h2 {
         font-weight: 300;
         font-size: 48px;
         color: white;
+
+        @media screen and (max-width: 520px) {
+            font-size: 16px;
+
+        }
     }
 }
+
 .hero-contact {
     z-index: 10;
     position: absolute;
