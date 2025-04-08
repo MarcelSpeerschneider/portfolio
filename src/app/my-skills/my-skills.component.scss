@@ -37,6 +37,17 @@ h1 {
     color: white;
     margin-block-end: 20px;
     margin-block-start: 0;
+
+    @media screen and (max-width: 1050px) {
+        font-size: 60px;
+        margin-block-start: 0;
+
+    }
+
+    @media screen and (max-width: 630px) {
+        font-size: 40px;
+
+    }
 }
 
 .skills-info-container {
@@ -62,6 +73,14 @@ h1 {
     align-items: center;
     justify-content: flex-end;
     gap: 32px;
+}
+
+.skills-text-headline-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 32px;
+    margin-top: 20px;
 }
 
 h2 {

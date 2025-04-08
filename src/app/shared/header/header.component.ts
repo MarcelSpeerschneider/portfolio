@@ -14,6 +14,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
   isMobile = false;
   isDesktop = true;
   private subscriptions = new Subscription();
+  isMenuOpen = false;
+
 
   constructor(private responsiveService: ResponsiveService) { }
 
@@ -28,6 +30,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.subscriptions.unsubscribe();
+  }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 }
 

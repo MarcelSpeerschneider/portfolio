@@ -1,4 +1,4 @@
-<div class="myskills">
+<div class="myskills" *ngIf="isDesktop else Mobileview">
     <div class="icons-container">
         <div class="icon-container-row">
             <div class="icon-container">
@@ -73,3 +73,77 @@
         <img class="vector" src="assets/img/vector-skills.svg" alt="">
     </div>
 </div>
+
+<ng-template #Mobileview>
+    <div class="skills-text-headline-mobile">
+        <img class="vector" src="assets/img/vector-skills.svg" alt="">
+        <h1>My Skills</h1>
+    </div>
+    <div class="icons-container">
+        <div class="icon-container-row">
+            <div class="icon-container">
+                <img src="assets/img/html.svg" alt="">
+                <span>HTML</span>
+            </div>
+            <div class="icon-container">
+                <img src="assets/img/css.svg" alt="">
+                <span>CSS</span>
+            </div>
+            <div class="icon-container">
+                <img src="assets/img/javascript-icon.svg" alt="">
+                <span>JavaScript</span>
+            </div>
+            <div class="icon-container">
+                <img src="assets/img/typescript.svg" alt="">
+                <span>TypeScript</span>
+            </div>
+        </div>
+        <div class="icon-container-row">
+            <div class="icon-container">
+                <img src="assets/img/angular.svg" alt="">
+                <span>Angular</span>
+            </div>
+            <div class="icon-container">
+                <img src="assets/img/firebase.svg" alt="">
+                <span>Firebase</span>
+            </div>
+            <div class="icon-container">
+                <img src="assets/img/git.svg" alt="">
+                <span>Git</span>
+            </div>
+            <div class="icon-container">
+                <img src="assets/img/api-icon.svg" alt="">
+                <span>Rest-API</span>
+            </div>
+        </div>
+        <div class="icon-container-row">
+            <div class="icon-container">
+                <img src="assets/img/scrum.svg" alt="">
+                <span>Scrum</span>
+            </div>
+            <div class="icon-container">
+                <img src="assets/img/materialdesign.svg" alt="">
+                <span>Material</span>
+                <span>Design</span>
+            </div>
+            <div class="icon-container">
+                <img src="assets/img/learning.svg" alt="">
+                <span>Continually</span>
+                <span>learning</span>
+            </div>
+            <div class="icon-container">
+            </div>
+        </div>
+    </div>
+        <div class="skills-info">
+            <div class="skills-text">
+                <span>Show that you have used a variety of front-end technologies in your projects.</span>
+                <h2>Looking for <span class="purple">another skill?</span></h2>
+                <span>Reveak enthusiam for learning new technologies and frameworks.</span>
+                <button class="green-button skills-button">Get in touch</button>
+            </div>
+            <div class="skills-shadow">
+                <img src="assets/img/greenshadow2.png" alt="">
+            </div>
+        </div>
+</ng-template>

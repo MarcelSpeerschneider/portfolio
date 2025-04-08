@@ -30,7 +30,7 @@
             <a href="">Portfolio</a>
         </nav>
     </div>
-    <ng-template #Mobileview >
+    <ng-template #Mobileview>
         <div class="mobile-header">
             <svg width="140.28" height="31.458" viewBox="0 0 140.28 31.458" xmlns="http://www.w3.org/2000/svg">
                 <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt">
@@ -53,7 +53,17 @@
                         vector-effect="non-scaling-stroke" />
                 </g>
             </svg>
-            <img src="assets/img/burgermenu.png" alt="">
-        </div>      
+            <div class="burger-icon" (click)="toggleMenu()">
+                <img src="assets/img/burgermenu.png" alt="Menu">
+            </div>
+        </div>
     </ng-template>
+
+    <div class="mobile-menu" [ngClass]="{'mobile-menu-open': isMenuOpen}">
+        <nav>
+            <a href="">About me</a>
+            <a href="">Skills</a>
+            <a href="">Portfolio</a>
+        </nav>
+    </div>
 </header>
